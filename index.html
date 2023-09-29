@@ -1,11 +1,27 @@
-<!-- 创建一个视频流播放软件 视频地址为./pj.mp4-->
-<html>  
-<head>  
-    <meta charset="utf-8">  
-    <title>视频流播放</title>
-</head>
-<body>  
-    <video src="./pj.mp4" controls="controls" width="800" height="600">您的浏览器不支持 video 标签。</video>
-</body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>视频播放</title>
+    <style>
+        /* 设置视频容器大小 */
+        .video-container {
+            width: 100%; /* 宽度占满屏幕 */
+            max-width: 100%; /* 最大宽度不超过视频原始大小 */
+            height: auto; /* 高度自适应 */
+        }
 
+        /* 移除视频默认边框 */
+        video {
+            display: block; /* 使视频元素变成块级元素 */
+            width: 100%; /* 宽度占满父容器 */
+            height: auto; /* 高度自适应 */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video src="./pj.mp4" controls="controls"></video>
+    </div>
+</body>
 </html>
